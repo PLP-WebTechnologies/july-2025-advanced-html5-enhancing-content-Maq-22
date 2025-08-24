@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced HTML5 Page with Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header, main, footer {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #4a148c;
+    }
+    ul, ol {
+      margin-left: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+      text-align: center;
+      padding: 8px;
+    }
+    thead th {
+      background-color: #eee;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    fieldset {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 15px;
+    }
+    legend {
+      font-weight: bold;
+      color: #6a1b9a;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="submit"] {
+      background-color: #6a1b9a;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+    }
+    input[type="submit"]:hover {
+      background-color: #4a148c;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My HTML5 Showcase</h1>
+    <p>This page demonstrates lists, tables, media embedding, and a fully validated form.</p>
+  </header>
+
+  <main>
+    <!-- Lists Section -->
+    <section>
+      <h2>My Favorite Hobbies</h2>
+      <ul>
+        <li>Reading Books</li>
+        <li>Traveling</li>
+        <li>Photography</li>
+      </ul>
+
+      <h2>Steps to Bake a Cake</h2>
+      <ol>
+        <li>Preheat the oven</li>
+        <li>Mix ingredients</li>
+        <li>Bake for 30 minutes</li>
+      </ol>
+    </section>
+
+    <!-- Table Section with thead and tbody -->
+    <section>
+      <h2>Sample Schedule</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Activity</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>Gym</td>
+            <td>6:00 AM</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>Cooking Class</td>
+            <td>5:00 PM</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>Movie Night</td>
+            <td>8:00 PM</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Media Section -->
+    <section>
+      <h2>Beautiful Polar Bear</h2>
+      <figure>
+        <img src="images/polar_bear_image.jpg" alt="Polar bear relaxing on ice" style="width:100%; border-radius:5px;">
+        <figcaption>A polar bear relaxing on the ice in the Arctic.</figcaption>
+      </figure>
+
+      <audio controls>
+        <source src="Audio/lovely_piano_song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+      <video controls style="max-width: 100%; width: 350px; border-radius: 8px;">
+        <source src="Media/sunflower_girl_video.mp4" type="video/mp4">
+        Your browser does not support the video element.
+      </video>
+    </section>
+
+    <!-- Form Section -->
+    <section>
+      <h2>Contact Form</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required minlength="3">
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" placeholder="e.g., +254712345678" pattern="^\+?\d{10,15}$" required>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferences</legend>
+          <label for="country">Country:</label>
+          <select id="country" name="country" required>
+            <option value="">Select your country</option>
+            <option value="Kenya">Kenya</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+          </select>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" placeholder="Write your message here..." rows="4" minlength="10" required></textarea>
+
+          <label>
+            <input type="checkbox" name="subscribe" value="yes" checked> Subscribe to newsletter
+          </label>
+        </fieldset>
+
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 HTML5 Showcase. All rights reserved.</p>
+  </footer>
+</body>
+</html>
